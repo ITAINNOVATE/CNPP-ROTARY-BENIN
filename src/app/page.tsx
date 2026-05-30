@@ -1,0 +1,346 @@
+import styles from "./page.module.css";
+import Image from "next/image";
+import { supabase } from "@/lib/supabaseClient";
+
+export default async function Home() {
+  // Fetch real data from Supabase (with fallback for demo purposes)
+  const { data: fetchedVideos } = await supabase.from('videos').select('*').order('created_at', { ascending: false }).limit(3);
+  const { data: fetchedCampaigns } = await supabase.from('campaigns').select('*').order('created_at', { ascending: false }).limit(2);
+
+  const displayVideos = fetchedVideos && fetchedVideos.length > 0 ? fetchedVideos : [
+    { id: 1, title: "PP Olga KATHEMA ABALLO", description: "Vice Présidente Bénin de la Commission Polio Plus du district 9103.", duration: "", category: "Rotary", language: "Français", video_url: "/capsule-1.mp4" },
+    { id: 2, title: "Mohamed BONI SENI", description: "Président du Comité de Liaison Inter Clubs du Bénin (CLIC).", duration: "", category: "Rotary", language: "Français", video_url: "/capsule-2.mp4" }
+  ];
+
+  const displayCampaigns = fetchedCampaigns && fetchedCampaigns.length > 0 ? fetchedCampaigns : [
+    {
+      id: 1,
+      title: "COMMUNIQUÉ | Vacciner pour la vie",
+      date: "Mai 2026",
+      image_url: "/annonce-vacciner-pour-la-vie.jpg",
+      description: `La Commission Nationale Polio Plus du Rotary Bénin, avec l’engagement des Rotary clubs et clubs Rotaract du Bénin, lance l’initiative « Vacciner pour la vie », une caravane digitale de sensibilisation communautaire pour promouvoir la vaccination et renforcer la confiance des populations dans les services de santé.
+À travers des capsules vidéo, des témoignages communautaires, des messages d’experts et des contenus en langues locales, cette campagne vise à rapprocher l’information fiable des familles et des communautés.
+
+🎯 Objectif :
+Informer, rassurer et mobiliser autour de l’importance de la vaccination pour la protection des enfants et des communautés.
+
+🤝 Avec l’appui des partenaires de l’Initiative mondiale pour l’éradication de la poliomyélite (IMEP), cette action s’inscrit dans une dynamique de sensibilisation moderne, inclusive et de proximité.
+
+📲 Suivez la campagne et partagez les messages autour de vous.
+
+#VaccinerPourLaVie #EndPolioNow #RotaryBenin`
+    },
+    {
+      id: 2,
+      title: "2ᵉ TOUR DE LA CAMPAGNE LOCALE DE VACCINATION CONTRE LA POLIOMYÉLITE",
+      date: "Juin 2026",
+      image_url: "/annonce-date-1.jpg",
+      description: `Du 12 au 15 juin 2026, les équipes de vaccination passeront dans les ménages des départements de l’Alibori, l’Atacora, le Borgou, les Collines, la Donga et le Plateau pour administrer gratuitement le vaccin contre la poliomyélite aux enfants de 0 à 59 mois.
+
+👶 Chaque enfant compte.
+💉 Le vaccin est sûr, efficace et gratuit.
+🛡️ La vaccination protège nos enfants contre la paralysie et contribue à préserver la santé de nos communautés.
+
+Parents, leaders communautaires, responsables religieux, enseignants et élus locaux, mobilisons-nous pour que chaque enfant soit effectivement vacciné.
+
+🤝 Ensemble, poursuivons nos efforts pour un avenir sans polio.
+
+#VaccinerPourLaVie #EndPolioNow #RotaryBenin #PolioPlus`
+    }
+  ];
+
+  return (
+    <>
+      <header className={styles.header}>
+        <div className={`container ${styles.headerContainer}`}>
+          <Image 
+            src="/logo-commission-polio.png" 
+            alt="Logo Commission Nationale Polio Plus" 
+            width={120} 
+            height={60} 
+            className={styles.logo}
+            style={{ objectFit: 'contain' }}
+          />
+          <nav className={styles.desktopNav}>
+            <a href="#accueil" className={styles.navLink}>Accueil</a>
+            <a href="#campagnes" className={styles.navLink}>Campagnes</a>
+            <a href="#ressources" className={styles.navLink}>Ressources</a>
+            <a href="#contact" className={styles.navLink}>Contact</a>
+          </nav>
+        </div>
+      </header>
+
+      <main className={styles.main}>
+        {/* HERO SECTION */}
+        <section id="accueil" className={styles.hero}>
+        <div className={styles.heroOverlay}></div>
+        <div className={`container ${styles.heroContent}`}>
+          <h1 className={styles.heroTitle}>VACCINER POUR LA VIE</h1>
+          <p className={styles.heroSubtitle}>
+            Informer, rassurer et protéger grâce à une information fiable sur la vaccination.
+          </p>
+          <div className={styles.heroButtons}>
+            <button className={styles.btnPrimary}>
+              ▶ Regarder les capsules vidéo
+            </button>
+            <button className={styles.btnSecondary}>
+              📢 Découvrir la campagne
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* MOT DU PRÉSIDENT */}
+      <section className={`section ${styles.presidentSection}`}>
+        <div className={`container ${styles.presidentContainer}`}>
+          <div className={styles.presidentImageWrapper}>
+            <Image 
+              src="/president.jpg" 
+              alt="PDG Dorothé GOUNON, Président de la Commission Nationale Polio Plus du Bénin"
+              width={400}
+              height={500}
+              className={styles.presidentImage}
+            />
+            <div className={styles.presidentInfo}>
+              <p className={styles.presidentName}>PDG Dorothé GOUNON</p>
+              <p className={styles.presidentTitle}>Président de la Commission Nationale Polio Plus du Bénin</p>
+            </div>
+          </div>
+          
+          <div className={styles.presidentContent}>
+            <h2 className={styles.sectionTitle}>Mot du Président de la Commission Nationale Polio Plus du Bénin</h2>
+            <div className={styles.presidentMessage}>
+              <p><strong>Chers visiteurs,</strong></p>
+              <p>Bienvenue sur la plateforme « Vacciner pour la Vie », une initiative portée par la Commission Nationale Polio Plus du Rotary Bénin.</p>
+              <p>Depuis plusieurs décennies, le Rotary International est engagé dans l'un des plus grands combats de santé publique de notre époque : l'éradication de la poliomyélite. Grâce à l'engagement des gouvernements, des partenaires techniques et financiers, des professionnels de santé et des communautés, le monde est aujourd'hui plus proche que jamais d'un avenir sans polio.</p>
+              <p>Toutefois, les défis liés à la désinformation, aux rumeurs et à l'hésitation vaccinale nous rappellent que la sensibilisation demeure essentielle.</p>
+              <p>À travers cette plateforme, nous souhaitons offrir à chaque citoyen un accès simple à des informations fiables, des témoignages inspirants et des contenus éducatifs permettant de mieux comprendre l'importance de la vaccination.</p>
+              <p>Nous invitons chacun à devenir un ambassadeur de la santé, de la prévention et de la protection des enfants.</p>
+              <p>Ensemble, continuons à bâtir des communautés mieux informées, mieux protégées et résolument tournées vers un avenir sans maladies évitables par la vaccination.</p>
+              <p>Je vous remercie pour votre engagement.</p>
+            </div>
+            <button className={styles.btnPrimary}>
+              Découvrir nos actions
+            </button>
+          </div>
+        </div>
+      </section>
+      {/* CHIFFRES CLÉS */}
+      <section className={`section ${styles.statsSection}`}>
+        <div className={`container ${styles.statsContainer}`}>
+          <div className={styles.statCard}>
+            <div className={styles.statNumber}>150+</div>
+            <div className={styles.statLabel}>Capsules Vidéo</div>
+          </div>
+          <div className={styles.statCard}>
+            <div className={styles.statNumber}>25</div>
+            <div className={styles.statLabel}>Partenaires</div>
+          </div>
+          <div className={styles.statCard}>
+            <div className={styles.statNumber}>12</div>
+            <div className={styles.statLabel}>Départements</div>
+          </div>
+          <div className={styles.statCard}>
+            <div className={styles.statNumber}>1.2M</div>
+            <div className={styles.statLabel}>Personnes Sensibilisées</div>
+          </div>
+        </div>
+      </section>
+      {/* CAPSULES VIDÉO */}
+      <section className={`section ${styles.videoSection}`}>
+        <div className={`container`}>
+          <div className={styles.sectionHeader}>
+            <h2 className={styles.sectionTitleCenter}>Nos Capsules de Sensibilisation</h2>
+            <p className={styles.sectionSubtitle}>Découvrez nos messages vidéo classés par catégories pour mieux comprendre et prévenir la poliomyélite.</p>
+          </div>
+          
+          <div className={styles.videoFilters}>
+            <button className={`${styles.filterBtn} ${styles.active}`}>Toutes</button>
+            <button className={styles.filterBtn}>Institutionnels</button>
+            <button className={styles.filterBtn}>Rotary</button>
+            <button className={styles.filterBtn}>OMS / UNICEF</button>
+            <button className={styles.filterBtn}>Témoignages</button>
+          </div>
+
+          <div className={styles.videoGrid}>
+            {displayVideos.map((item) => (
+              <div key={item.id} className={styles.videoCard}>
+                <div className={styles.videoThumbnailWrapper}>
+                  {item.video_url ? (
+                    <video src={item.video_url} controls style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  ) : (
+                    <>
+                      <Image src={item.thumbnail_url || "/video-thumb.jpg"} alt="Video thumbnail" layout="fill" objectFit="cover" />
+                      <div className={styles.playIcon}>▶</div>
+                      <span className={styles.videoDuration}>{item.duration || "03:45"}</span>
+                    </>
+                  )}
+                </div>
+                <div className={styles.videoInfo}>
+                  <div className={styles.videoTags}>
+                    <span className={styles.tag}>{item.category || "Général"}</span>
+                    {item.language && <span className={styles.tag}>{item.language}</span>}
+                  </div>
+                  <h3 className={styles.videoTitle}>{item.title}</h3>
+                  <p className={styles.videoDesc}>{item.description}</p>
+                  <button className={styles.btnWatch}>Regarder la vidéo</button>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className={styles.viewAllWrapper}>
+            <button className={styles.btnPrimary}>Voir toutes les capsules</button>
+          </div>
+        </div>
+      </section>
+
+      {/* INFO OU RUMEUR */}
+      <section className={`section ${styles.rumorSection}`}>
+        <div className={`container`}>
+          <div className={styles.sectionHeader}>
+            <h2 className={styles.sectionTitleCenter}>Info ou Rumeur ?</h2>
+            <p className={styles.sectionSubtitle}>Démêlez le vrai du faux sur la vaccination.</p>
+          </div>
+          
+          <div className={styles.rumorGrid}>
+            <div className={styles.rumorCard}>
+              <div className={styles.rumorInner}>
+                <div className={styles.rumorFront}>
+                  <div className={styles.rumorIcon}>❌</div>
+                  <h3>Rumeur</h3>
+                  <p>Les vaccins sont dangereux.</p>
+                  <span className={styles.flipHint}>Voir la vérité ⤵</span>
+                </div>
+                <div className={styles.rumorBack}>
+                  <div className={styles.rumorIcon}>✅</div>
+                  <h3>Vérité</h3>
+                  <p>Les vaccins sont sûrs, efficaces et rigoureusement contrôlés par l'OMS.</p>
+                </div>
+              </div>
+            </div>
+
+            <div className={styles.rumorCard}>
+              <div className={styles.rumorInner}>
+                <div className={styles.rumorFront}>
+                  <div className={styles.rumorIcon}>❌</div>
+                  <h3>Rumeur</h3>
+                  <p>Mon enfant semble en bonne santé, il n'a pas besoin d'être vacciné.</p>
+                  <span className={styles.flipHint}>Voir la vérité ⤵</span>
+                </div>
+                <div className={styles.rumorBack}>
+                  <div className={styles.rumorIcon}>✅</div>
+                  <h3>Vérité</h3>
+                  <p>La vaccination protège avant l'apparition de la maladie et crée une immunité de groupe.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CAMPAGNES & ACTUALITÉS */}
+      <section id="campagnes" className={`section ${styles.campaignSection}`}>
+        <div className={`container`}>
+          <div className={styles.sectionHeader}>
+            <h2 className={styles.sectionTitleCenter}>Nos Campagnes & Actualités</h2>
+            <p className={styles.sectionSubtitle}>Restez informés des dernières actions sur le terrain.</p>
+          </div>
+          
+          <div className={styles.campaignGrid}>
+            {displayCampaigns.map((camp) => (
+              <div key={camp.id} className={styles.campaignCard}>
+                <div className={styles.campaignImageWrapper}>
+                  <Image src={camp.image_url || "/hero-bg.jpg"} alt={camp.title} layout="fill" objectFit="cover" />
+                </div>
+                <div className={styles.campaignInfo}>
+                  <span className={styles.campaignDate}>{camp.date || "Récemment"}</span>
+                  <h3 className={styles.campaignTitle}>{camp.title}</h3>
+                  <p className={styles.campaignDesc} style={{ whiteSpace: "pre-wrap" }}>{camp.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CARTE INTERACTIVE */}
+      <section className={`section ${styles.mapSection}`}>
+        <div className={`container ${styles.mapContainer}`}>
+          <div className={styles.mapContent}>
+            <h2 className={styles.sectionTitle}>Découvrez l'impact dans nos départements prioritaires</h2>
+            <p className={styles.mapText}>Explorez notre carte interactive pour découvrir les témoignages locaux, les vidéos adaptées aux langues de chaque région et les statistiques de vaccination.</p>
+            <ul className={styles.mapList}>
+              <li>📍 Alibori</li>
+              <li>📍 Atacora</li>
+              <li>📍 Borgou</li>
+              <li>📍 Collines</li>
+              <li>📍 Donga</li>
+              <li>📍 Plateau</li>
+            </ul>
+            <button className={styles.btnPrimary}>Explorer la carte</button>
+          </div>
+          <div className={styles.mapVisual}>
+            {/* Placeholder for SVG Map */}
+            <div className={styles.mapPlaceholder}>
+              Carte Interactive du Bénin<br/>(SVG à intégrer)
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* PARTENAIRES */}
+      <section className={`section ${styles.partnerSection}`}>
+        <div className={`container`}>
+          <h2 className={styles.partnerTitle}>Ils s'engagent avec nous</h2>
+          <div className={styles.partnerGrid}>
+            <div className={styles.partnerLogoText}>Rotary International</div>
+            <div className={styles.partnerLogoText}>End Polio Now</div>
+            
+            <div className={styles.partnerLogoImage}>
+              <Image src="/logo-ministere-sante.png" alt="Ministère de la Santé" width={140} height={80} style={{ objectFit: 'contain' }} />
+            </div>
+            <div className={styles.partnerLogoImage}>
+              <Image src="/logo-oms.png" alt="OMS" width={100} height={80} style={{ objectFit: 'contain' }} />
+            </div>
+            <div className={styles.partnerLogoImage}>
+              <Image src="/logo-unicef.png" alt="UNICEF" width={140} height={80} style={{ objectFit: 'contain' }} />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* À PROPOS & CONTACT */}
+      <section className={`section ${styles.contactSection}`}>
+        <div className={`container ${styles.contactContainer}`}>
+          <div className={styles.aboutContent}>
+            <h2 className={styles.sectionTitle}>À Propos</h2>
+            <p className={styles.aboutText}>La Commission Nationale Polio Plus du Rotary Bénin coordonne les actions de sensibilisation, de plaidoyer et de mobilisation en faveur de l'éradication de la poliomyélite et de la promotion de la vaccination au Bénin.</p>
+            <div className={styles.contactInfo}>
+              <p>📍 Cotonou, Bénin</p>
+              <p>📞 00229 01 97 11 33 33</p>
+              <p>✉️ contact@vaccinerpourlavie.bj</p>
+            </div>
+            <div className={styles.socialLinks}>
+              <a href="https://wa.me/2290197113333" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} title="WhatsApp">WA</a>
+              <a href="https://www.facebook.com/profile.php?id=61590120160886" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} title="Facebook">FB</a>
+              <a href="https://www.instagram.com/vaccinerpourlavie/" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} title="Instagram">IG</a>
+              <a href="https://www.linkedin.com/company/118934615/" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} title="LinkedIn">IN</a>
+            </div>
+          </div>
+          <div className={styles.contactForm}>
+            <h3 className={styles.formTitle}>Nous contacter</h3>
+            <form>
+              <input type="text" placeholder="Nom complet" className={styles.formInput} />
+              <input type="email" placeholder="Adresse Email" className={styles.formInput} />
+              <input type="text" placeholder="Sujet" className={styles.formInput} />
+              <textarea placeholder="Votre message" rows={5} className={styles.formTextarea}></textarea>
+              <button type="button" className={styles.btnPrimary}>Envoyer le message</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+    </main>
+    </>
+  );
+}
