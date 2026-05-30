@@ -65,6 +65,7 @@ Parents, leaders communautaires, responsables religieux, enseignants et élus lo
             height={90} 
             className={styles.logo}
             style={{ objectFit: 'contain' }}
+            priority={true}
           />
           <nav className={styles.desktopNav}>
             <a href="#accueil" className={styles.navLink}>Accueil</a>
@@ -172,7 +173,13 @@ Parents, leaders communautaires, responsables religieux, enseignants et élus lo
               <div key={item.id} className={styles.videoCard}>
                 <div className={styles.videoThumbnailWrapper}>
                   {item.video_url ? (
-                    <video src={item.video_url} controls style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    <video 
+                      src={item.video_url} 
+                      controls 
+                      preload="none"
+                      poster="/video-thumb.jpg"
+                      style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '12px' }} 
+                    />
                   ) : (
                     <>
                       <Image src={item.thumbnail_url || "/video-thumb.jpg"} alt="Video thumbnail" layout="fill" objectFit="cover" />
