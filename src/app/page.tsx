@@ -56,8 +56,8 @@ Parents, leaders communautaires, responsables religieux, enseignants et élus lo
           <Image 
             src="/logo-commission-polio.png" 
             alt="Logo Commission Nationale Polio Plus" 
-            width={120} 
-            height={60} 
+            width={240} 
+            height={90} 
             className={styles.logo}
             style={{ objectFit: 'contain' }}
           />
@@ -292,18 +292,34 @@ Parents, leaders communautaires, responsables religieux, enseignants et élus lo
       <section className={`section ${styles.partnerSection}`}>
         <div className={`container`}>
           <h2 className={styles.partnerTitle}>Ils s'engagent avec nous</h2>
-          <div className={styles.partnerGrid}>
-            <div className={styles.partnerLogoText}>Rotary International</div>
-            <div className={styles.partnerLogoText}>End Polio Now</div>
-            
-            <div className={styles.partnerLogoImage}>
-              <Image src="/logo-ministere-sante.png" alt="Ministère de la Santé" width={140} height={80} style={{ objectFit: 'contain' }} />
-            </div>
-            <div className={styles.partnerLogoImage}>
-              <Image src="/logo-oms.png" alt="OMS" width={100} height={80} style={{ objectFit: 'contain' }} />
-            </div>
-            <div className={styles.partnerLogoImage}>
-              <Image src="/logo-unicef.png" alt="UNICEF" width={140} height={80} style={{ objectFit: 'contain' }} />
+          
+          <div className={styles.marqueeContainer}>
+            <div className={styles.partnerGrid}>
+              {/* FIRST SET */}
+              <div className={styles.partnerLogoText}>Rotary International</div>
+              <div className={styles.partnerLogoText}>End Polio Now</div>
+              <div className={styles.partnerLogoImage}>
+                <Image src="/logo-ministere-sante.png" alt="Ministère de la Santé" width={140} height={80} style={{ objectFit: 'contain' }} />
+              </div>
+              <div className={styles.partnerLogoImage}>
+                <Image src="/logo-oms.png" alt="OMS" width={100} height={80} style={{ objectFit: 'contain' }} />
+              </div>
+              <div className={styles.partnerLogoImage}>
+                <Image src="/logo-unicef.png" alt="UNICEF" width={140} height={80} style={{ objectFit: 'contain' }} />
+              </div>
+
+              {/* DUPLICATE SET FOR SEAMLESS SCROLL */}
+              <div className={styles.partnerLogoText}>Rotary International</div>
+              <div className={styles.partnerLogoText}>End Polio Now</div>
+              <div className={styles.partnerLogoImage}>
+                <Image src="/logo-ministere-sante.png" alt="Ministère de la Santé" width={140} height={80} style={{ objectFit: 'contain' }} />
+              </div>
+              <div className={styles.partnerLogoImage}>
+                <Image src="/logo-oms.png" alt="OMS" width={100} height={80} style={{ objectFit: 'contain' }} />
+              </div>
+              <div className={styles.partnerLogoImage}>
+                <Image src="/logo-unicef.png" alt="UNICEF" width={140} height={80} style={{ objectFit: 'contain' }} />
+              </div>
             </div>
           </div>
         </div>
