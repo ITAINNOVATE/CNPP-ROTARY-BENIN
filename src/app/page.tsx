@@ -163,7 +163,7 @@ Parents, leaders communautaires, responsables religieux, enseignants et élus lo
           </div>
 
           <div className={styles.videoGrid}>
-            {displayVideos.map((item) => (
+            {displayVideos.map((item: any) => (
               <div key={item.id} className={styles.videoCard}>
                 <div className={styles.videoThumbnailWrapper}>
                   {item.video_url ? (
@@ -247,7 +247,7 @@ Parents, leaders communautaires, responsables religieux, enseignants et élus lo
           </div>
           
           <div className={styles.campaignGrid}>
-            {displayCampaigns.map((camp) => (
+            {displayCampaigns.map((camp: any) => (
               <div key={camp.id} className={styles.campaignCard}>
                 <div className={styles.campaignImageWrapper}>
                   <Image src={camp.image_url || "/hero-bg.jpg"} alt={camp.title} layout="fill" objectFit="cover" />
