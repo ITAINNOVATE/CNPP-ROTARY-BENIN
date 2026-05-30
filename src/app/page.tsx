@@ -95,7 +95,7 @@ Parents, leaders communautaires, responsables religieux, enseignants et élus lo
         <div className={`container ${styles.presidentContainer}`}>
           <div className={styles.presidentImageWrapper}>
             <Image 
-              src="/president.jpg" 
+              src="/pdg_dorothee_gounon.jpg" 
               alt="PDG Dorothé GOUNON, Président de la Commission Nationale Polio Plus du Bénin"
               width={400}
               height={500}
