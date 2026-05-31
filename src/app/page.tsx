@@ -61,8 +61,8 @@ Ensemble, poursuivons nos efforts pour un avenir sans polio.
           <Image 
             src="/logo-commission-polio.png" 
             alt="Logo Commission Nationale Polio Plus" 
-            width={240} 
-            height={90} 
+            width={400} 
+            height={120} 
             className={styles.logo}
             style={{ objectFit: 'contain' }}
             priority={true}
