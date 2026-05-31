@@ -116,6 +116,7 @@ Ensemble, poursuivons nos efforts pour un avenir sans polio.
               width={400}
               height={500}
               className={styles.presidentImage}
+              priority
             />
             <div className={styles.presidentInfo}>
               <p className={styles.presidentName}>PDG Dorothé GOUNON</p>
