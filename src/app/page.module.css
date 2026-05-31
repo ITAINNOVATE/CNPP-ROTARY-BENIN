@@ -802,40 +802,51 @@
 
 /* HEADER & NAV */
 .header {
-  background-color: var(--color-white);
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   position: sticky;
   top: 0;
   z-index: 1000;
   width: 100%;
+  transition: all 0.3s ease;
 }
 
 .headerContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 90px;
+  height: 100px;
 }
 
 .logo {
   cursor: pointer;
+  filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.05));
 }
 
 .desktopNav {
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
   align-items: center;
 }
 
 .navLink {
   color: var(--color-black);
   font-weight: 600;
+  font-size: 1.05rem;
   text-decoration: none;
-  transition: color 0.3s;
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
 .navLink:hover {
   color: var(--color-primary);
+  background-color: rgba(0, 93, 170, 0.08);
+  transform: translateY(-2px);
 }
 
 /* CALENDRIER VACCINAL */

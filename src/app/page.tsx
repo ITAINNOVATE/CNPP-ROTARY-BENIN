@@ -278,6 +278,38 @@ Ensemble, poursuivons nos efforts pour un avenir sans polio.
                 </div>
               </div>
             </div>
+
+            <div className={styles.rumorCard}>
+              <div className={styles.rumorInner}>
+                <div className={styles.rumorFront}>
+                  <div className={styles.rumorIcon}>❌</div>
+                  <h3>Rumeur</h3>
+                  <p>Le vaccin contre la polio rendrait les enfants stériles à l'âge adulte.</p>
+                  <span className={styles.flipHint}>Voir la vérité ⤵</span>
+                </div>
+                <div className={styles.rumorBack}>
+                  <div className={styles.rumorIcon}>✅</div>
+                  <h3>Vérité</h3>
+                  <p>C'est totalement faux. Les vaccins protègent la santé sans aucun effet sur la fertilité, comme prouvé par de nombreuses études scientifiques indépendantes.</p>
+                </div>
+              </div>
+            </div>
+
+            <div className={styles.rumorCard}>
+              <div className={styles.rumorInner}>
+                <div className={styles.rumorFront}>
+                  <div className={styles.rumorIcon}>❌</div>
+                  <h3>Rumeur</h3>
+                  <p>Les remèdes traditionnels suffisent à protéger l'enfant contre la polio.</p>
+                  <span className={styles.flipHint}>Voir la vérité ⤵</span>
+                </div>
+                <div className={styles.rumorBack}>
+                  <div className={styles.rumorIcon}>✅</div>
+                  <h3>Vérité</h3>
+                  <p>Seuls les vaccins homologués ont prouvé scientifiquement leur efficacité pour prévenir des maladies graves et invalidantes comme la poliomyélite.</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
