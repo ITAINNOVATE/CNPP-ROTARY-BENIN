@@ -871,15 +871,17 @@
   font-size: 1.05rem;
   text-decoration: none;
   padding: 0.5rem 1.2rem;
-  border: 2px solid #FF8C00;
+  border: 2px solid #F7A81B;
   border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(247, 168, 27, 0.25);
   transition: all 0.3s ease;
   position: relative;
 }
 
 .navLink:hover {
   color: #fff;
-  background-color: #FF8C00;
+  background-color: #F7A81B;
+  box-shadow: 0 6px 20px rgba(247, 168, 27, 0.45);
   transform: translateY(-2px);
 }
 
