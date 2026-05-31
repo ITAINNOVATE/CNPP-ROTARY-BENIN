@@ -838,3 +838,63 @@
   color: var(--color-primary);
 }
 
+/* CALENDRIER VACCINAL */
+.calendarSection {
+  background-color: #f9f9f9;
+}
+
+.calendarGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.calendarCard {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  text-align: center;
+  border-top: 4px solid var(--color-primary);
+  transition: transform 0.3s;
+}
+
+.calendarCard:hover {
+  transform: translateY(-5px);
+}
+
+.calendarIcon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.calendarAge {
+  color: var(--color-secondary);
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  min-height: 2.5rem;
+}
+
+.calendarAge small {
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.calendarList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.calendarList li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+  font-size: 0.95rem;
+}
+
+.calendarList li:last-child {
+  border-bottom: none;
+}

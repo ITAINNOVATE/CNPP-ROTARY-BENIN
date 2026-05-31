@@ -246,6 +246,96 @@ Ensemble, poursuivons nos efforts pour un avenir sans polio.
                 </div>
               </div>
             </div>
+
+            <div className={styles.rumorCard}>
+              <div className={styles.rumorInner}>
+                <div className={styles.rumorFront}>
+                  <div className={styles.rumorIcon}>❌</div>
+                  <h3>Rumeur</h3>
+                  <p>La poliomyélite a disparu, le vaccin n'est plus utile aujourd'hui.</p>
+                  <span className={styles.flipHint}>Voir la vérité ⤵</span>
+                </div>
+                <div className={styles.rumorBack}>
+                  <div className={styles.rumorIcon}>✅</div>
+                  <h3>Vérité</h3>
+                  <p>Tant que le virus circule encore dans le monde, chaque enfant non vacciné est en danger. La vaccination reste indispensable.</p>
+                </div>
+              </div>
+            </div>
+
+            <div className={styles.rumorCard}>
+              <div className={styles.rumorInner}>
+                <div className={styles.rumorFront}>
+                  <div className={styles.rumorIcon}>❌</div>
+                  <h3>Rumeur</h3>
+                  <p>Plusieurs doses du même vaccin contre la polio peuvent affaiblir l'enfant.</p>
+                  <span className={styles.flipHint}>Voir la vérité ⤵</span>
+                </div>
+                <div className={styles.rumorBack}>
+                  <div className={styles.rumorIcon}>✅</div>
+                  <h3>Vérité</h3>
+                  <p>Au contraire, les doses supplémentaires renforcent l'immunité et assurent une protection complète à 100% contre le virus.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CALENDRIER VACCINAL */}
+      <section className={`section ${styles.calendarSection}`}>
+        <div className={`container`}>
+          <div className={styles.sectionHeader}>
+            <h2 className={styles.sectionTitleCenter}>Calendrier Vaccinal de l'Enfant au Bénin</h2>
+            <p className={styles.sectionSubtitle}>Protégez vos enfants dès la naissance en respectant rigoureusement ces rendez-vous de santé.</p>
+          </div>
+          
+          <div className={styles.calendarGrid}>
+            <div className={styles.calendarCard}>
+              <div className={styles.calendarIcon}>👶</div>
+              <h4 className={styles.calendarAge}>À la naissance</h4>
+              <ul className={styles.calendarList}>
+                <li><strong>BCG</strong> (Tuberculose)</li>
+                <li><strong>VPO 0</strong> (Polio Oral)</li>
+              </ul>
+            </div>
+            
+            <div className={styles.calendarCard}>
+              <div className={styles.calendarIcon}>⏳</div>
+              <h4 className={styles.calendarAge}>6 semaines <br/><small>(1 mois et demi)</small></h4>
+              <ul className={styles.calendarList}>
+                <li><strong>VPO 1</strong> (Polio Oral)</li>
+                <li>Penta 1, Pneumo 1, Rota 1</li>
+              </ul>
+            </div>
+            
+            <div className={styles.calendarCard}>
+              <div className={styles.calendarIcon}>🍼</div>
+              <h4 className={styles.calendarAge}>10 semaines <br/><small>(2 mois et demi)</small></h4>
+              <ul className={styles.calendarList}>
+                <li><strong>VPO 2</strong> (Polio Oral)</li>
+                <li>Penta 2, Pneumo 2, Rota 2</li>
+              </ul>
+            </div>
+            
+            <div className={styles.calendarCard}>
+              <div className={styles.calendarIcon}>🧸</div>
+              <h4 className={styles.calendarAge}>14 semaines <br/><small>(3 mois et demi)</small></h4>
+              <ul className={styles.calendarList}>
+                <li><strong>VPO 3</strong> (Polio Oral)</li>
+                <li><strong>VPI</strong> (Polio Injectable)</li>
+                <li>Penta 3, Pneumo 3</li>
+              </ul>
+            </div>
+            
+            <div className={styles.calendarCard}>
+              <div className={styles.calendarIcon}>🎂</div>
+              <h4 className={styles.calendarAge}>9 mois</h4>
+              <ul className={styles.calendarList}>
+                <li><strong>RR</strong> (Rougeole, Rubéole)</li>
+                <li><strong>VAA</strong> (Fièvre Jaune)</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
