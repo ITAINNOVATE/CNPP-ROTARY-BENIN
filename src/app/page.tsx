@@ -262,7 +262,7 @@ Parents, leaders communautaires, responsables religieux, enseignants et élus lo
             {displayCampaigns.map((camp: any) => (
               <div key={camp.id} className={styles.campaignCard}>
                 <div className={styles.campaignImageWrapper}>
-                  <Image src={camp.image_url || "/hero-bg.jpg"} alt={camp.title} layout="fill" objectFit="cover" />
+                  <Image src={camp.image_url || "/hero-bg.jpg"} alt={camp.title} layout="fill" objectFit="contain" />
                 </div>
                 <div className={styles.campaignInfo}>
                   <span className={styles.campaignDate}>{camp.date || "Récemment"}</span>
@@ -308,8 +308,6 @@ Parents, leaders communautaires, responsables religieux, enseignants et élus lo
           <div className={styles.marqueeContainer}>
             <div className={styles.partnerGrid}>
               {/* FIRST SET */}
-              <div className={styles.partnerLogoText}>Rotary International</div>
-              <div className={styles.partnerLogoText}>End Polio Now</div>
               <div className={styles.partnerLogoImage}>
                 <Image src="/logo-ministere-sante.png" alt="Ministère de la Santé" width={140} height={80} style={{ objectFit: 'contain' }} />
               </div>
@@ -321,8 +319,6 @@ Parents, leaders communautaires, responsables religieux, enseignants et élus lo
               </div>
 
               {/* DUPLICATE SET FOR SEAMLESS SCROLL */}
-              <div className={styles.partnerLogoText}>Rotary International</div>
-              <div className={styles.partnerLogoText}>End Polio Now</div>
               <div className={styles.partnerLogoImage}>
                 <Image src="/logo-ministere-sante.png" alt="Ministère de la Santé" width={140} height={80} style={{ objectFit: 'contain' }} />
               </div>
