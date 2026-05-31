@@ -348,7 +348,7 @@ Ensemble, poursuivons nos efforts pour un avenir sans polio.
             {displayCampaigns.map((camp: any) => (
               <div key={camp.id} className={styles.campaignCard}>
                 <div className={styles.campaignImageWrapper}>
-                  <Image src={camp.image_url || "/hero-bg.jpg"} alt={camp.title} layout="fill" objectFit="contain" />
+                  <Image src={camp.image_url || "/hero-bg.jpg"} alt={camp.title} layout="fill" objectFit="contain" priority />
                 </div>
                 <div className={styles.campaignInfo}>
                   <span className={styles.campaignDate}>{camp.date || "Récemment"}</span>
