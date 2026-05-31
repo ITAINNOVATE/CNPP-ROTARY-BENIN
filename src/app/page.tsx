@@ -309,6 +309,9 @@ Parents, leaders communautaires, responsables religieux, enseignants et élus lo
             <div className={styles.partnerGrid}>
               {/* FIRST SET */}
               <div className={styles.partnerLogoImage}>
+                <Image src="/logo-rotary-polio.png" alt="Rotary Polio" width={200} height={80} style={{ objectFit: 'contain' }} />
+              </div>
+              <div className={styles.partnerLogoImage}>
                 <Image src="/logo-ministere-sante.png" alt="Ministère de la Santé" width={140} height={80} style={{ objectFit: 'contain' }} />
               </div>
               <div className={styles.partnerLogoImage}>
@@ -319,6 +322,9 @@ Parents, leaders communautaires, responsables religieux, enseignants et élus lo
               </div>
 
               {/* DUPLICATE SET FOR SEAMLESS SCROLL */}
+              <div className={styles.partnerLogoImage}>
+                <Image src="/logo-rotary-polio.png" alt="Rotary Polio" width={200} height={80} style={{ objectFit: 'contain' }} />
+              </div>
               <div className={styles.partnerLogoImage}>
                 <Image src="/logo-ministere-sante.png" alt="Ministère de la Santé" width={140} height={80} style={{ objectFit: 'contain' }} />
               </div>
