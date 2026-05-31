@@ -1,6 +1,7 @@
 import styles from "./page.module.css";
 import Image from "next/image";
 import { supabase } from "@/lib/supabaseClient";
+import AnimatedStats from "@/components/AnimatedStats";
 
 export default async function Home() {
   // Fetch real data from Supabase (with fallback for demo purposes)
@@ -131,27 +132,8 @@ Ensemble, poursuivons nos efforts pour un avenir sans polio.
           </div>
         </div>
       </section>
-      {/* CHIFFRES CLÉS */}
-      <section className={`section ${styles.statsSection}`}>
-        <div className={`container ${styles.statsContainer}`}>
-          <div className={styles.statCard}>
-            <div className={styles.statNumber}>150+</div>
-            <div className={styles.statLabel}>Capsules Vidéo</div>
-          </div>
-          <div className={styles.statCard}>
-            <div className={styles.statNumber}>25</div>
-            <div className={styles.statLabel}>Partenaires</div>
-          </div>
-          <div className={styles.statCard}>
-            <div className={styles.statNumber}>12</div>
-            <div className={styles.statLabel}>Départements</div>
-          </div>
-          <div className={styles.statCard}>
-            <div className={styles.statNumber}>1.2M</div>
-            <div className={styles.statLabel}>Personnes Sensibilisées</div>
-          </div>
-        </div>
-      </section>
+      {/* CHIFFRES CLÉS (ANIMÉS) */}
+      <AnimatedStats />
       {/* CAPSULES VIDÉO */}
       <section className={`section ${styles.videoSection}`}>
         <div className={`container`}>
