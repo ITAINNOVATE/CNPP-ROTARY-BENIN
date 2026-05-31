@@ -96,9 +96,9 @@ Ensemble, poursuivons nos efforts pour un avenir sans polio.
             Informer, rassurer et protéger grâce à une information fiable sur la vaccination.
           </p>
           <div className={styles.heroButtons}>
-            <button className={styles.btnPrimary}>
+            <a href="#ressources" className={styles.btnPrimary}>
               Regarder les capsules vidéo
-            </button>
+            </a>
             <a href="#campagnes" className={styles.btnSecondary}>
               Découvrir la campagne
             </a>
