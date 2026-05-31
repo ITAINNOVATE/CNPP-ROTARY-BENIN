@@ -20,7 +20,7 @@ export default async function Home() {
   const displayCampaigns = fetchedCampaigns && fetchedCampaigns.length > 0 ? fetchedCampaigns : [
     {
       id: 1,
-      title: "COMMUNIQUÉ | Vacciner pour la vie",
+      title: "Communiqué de Lancement de l'initiative \"Vacciner pour la vie\" : campagne digitale de sensibilisation",
       date: "Mai 2026",
       image_url: "/annonce-vacciner-pour-la-vie.jpg",
       description: `La Commission Nationale Polio Plus du Rotary Bénin, avec l’engagement des Rotary clubs et clubs Rotaract du Bénin, lance l’initiative « Vacciner pour la vie », une caravane digitale de sensibilisation communautaire pour promouvoir la vaccination et renforcer la confiance des populations dans les services de santé.
