@@ -60,9 +60,9 @@ Ensemble, poursuivons nos efforts pour un avenir sans polio.
     <>
       <div className={styles.topTicker}>
         <div className={styles.tickerContent}>
-          <span>📢 Infos actuelles: Campagne locale de vaccination contre la Poliomyélite du 12 au 15 Juin 2026 (Alibori, Atacora, Borgou, Collines, Donga et Plateau)</span>
+          <span>📢 Campagne locale de vaccination contre la Poliomyélite du 12 au 15 Juin 2026 (Alibori, Atacora, Borgou, Collines, Donga et Plateau)</span>
           <span>&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;</span>
-          <span>📢 Infos actuelles: Campagne locale de vaccination contre la Poliomyélite du 12 au 15 Juin 2026 (Alibori, Atacora, Borgou, Collines, Donga et Plateau)</span>
+          <span>📢 Campagne locale de vaccination contre la Poliomyélite du 12 au 15 Juin 2026 (Alibori, Atacora, Borgou, Collines, Donga et Plateau)</span>
         </div>
       </div>
       <header className={styles.header}>
