@@ -3,6 +3,7 @@ import Image from "next/image";
 import { supabase } from "@/lib/supabaseClient";
 import AnimatedStats from "@/components/AnimatedStats";
 import InteractiveMap from "@/components/InteractiveMap";
+import VideoCard from "@/components/VideoCard";
 
 export default async function Home() {
   // Fetch real data from Supabase (with fallback for demo purposes)
@@ -160,34 +161,7 @@ Ensemble, poursuivons nos efforts pour un avenir sans polio.
 
           <div className={styles.videoGrid}>
             {displayVideos.map((item: any) => (
-              <div key={item.id} className={styles.videoCard}>
-                <div className={styles.videoThumbnailWrapper}>
-                  {item.video_url ? (
-                    <video 
-                      src={item.video_url} 
-                      controls 
-                      preload="none"
-                      poster="/video-thumb.jpg"
-                      style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '12px' }} 
-                    />
-                  ) : (
-                    <>
-                      <Image src={item.thumbnail_url || "/video-thumb.jpg"} alt="Video thumbnail" layout="fill" objectFit="cover" />
-                      <div className={styles.playIcon}>▶</div>
-                      <span className={styles.videoDuration}>{item.duration || "03:45"}</span>
-                    </>
-                  )}
-                </div>
-                <div className={styles.videoInfo}>
-                  <div className={styles.videoTags}>
-                    <span className={styles.tag}>{item.category || "Général"}</span>
-                    {item.language && <span className={styles.tag}>{item.language}</span>}
-                  </div>
-                  <h3 className={styles.videoTitle}>{item.title}</h3>
-                  <p className={styles.videoDesc}>{item.description}</p>
-                  <button className={styles.btnWatch}>Regarder la vidéo</button>
-                </div>
-              </div>
+              <VideoCard key={item.id} item={item} />
             ))}
           </div>
           <div className={styles.viewAllWrapper}>
