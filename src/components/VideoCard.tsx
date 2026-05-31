@@ -12,9 +12,9 @@ export default function VideoCard({ item }: { item: any }) {
         <div className={styles.videoThumbnailWrapper} onClick={() => setIsModalOpen(true)} style={{ cursor: 'pointer' }}>
           {item.video_url ? (
             <video 
-              src={item.video_url} 
-              preload="none"
-              poster="/video-thumb.jpg"
+              src={`${item.video_url}#t=0.1`} 
+              preload="metadata"
+              poster={item.thumbnail_url ? item.thumbnail_url : undefined}
               style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '12px' }} 
             />
           ) : (
