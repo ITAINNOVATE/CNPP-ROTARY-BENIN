@@ -96,7 +96,7 @@ Ensemble, poursuivons nos efforts pour un avenir sans polio.
             Informer, rassurer et protéger grâce à une information fiable sur la vaccination.
           </p>
           <div className={styles.heroButtons}>
-            <a href="#ressources" className={styles.btnPrimary}>
+            <a href="#capsules" className={styles.btnPrimary}>
               Regarder les capsules vidéo
             </a>
             <a href="#campagnes" className={styles.btnSecondary}>
@@ -145,7 +145,7 @@ Ensemble, poursuivons nos efforts pour un avenir sans polio.
       {/* CHIFFRES CLÉS (ANIMÉS) */}
       <AnimatedStats />
       {/* CAPSULES VIDÉO */}
-      <section className={`section ${styles.videoSection}`}>
+      <section id="capsules" className={`section ${styles.videoSection}`}>
         <div className={`container`}>
           <div className={styles.sectionHeader}>
             <h2 className={styles.sectionTitleCenter}>Nos Capsules de Sensibilisation</h2>
