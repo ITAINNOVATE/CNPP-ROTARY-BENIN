@@ -72,7 +72,7 @@ Ensemble, poursuivons nos efforts pour un avenir sans polio.
           <nav className={styles.desktopNav}>
             <a href="#accueil" className={styles.navLink}>Accueil</a>
             <a href="#campagnes" className={styles.navLink}>Campagnes</a>
-            <a href="#ressources" className={styles.navLink}>Ressources</a>
+            <a href="#ressources" className={styles.navLink}>IMPACT/GALERIE</a>
             <a href="#contact" className={styles.navLink}>Contact</a>
           </nav>
         </div>
@@ -482,7 +482,12 @@ Ensemble, poursuivons nos efforts pour un avenir sans polio.
         </div>
       </section>
 
-    </main>
+      </main>
+
+      <footer className={styles.footer}>
+        <span>&copy; 2026 CNPP Rotary Bénin. Tous droits réservés. &nbsp;|&nbsp; </span>
+        <span>Réalisé par <strong style={{ color: '#00D1B2' }}>ITA INNOVATE</strong></span>
+      </footer>
     </>
   );
 }

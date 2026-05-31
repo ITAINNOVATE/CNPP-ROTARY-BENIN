@@ -909,3 +909,22 @@
 .calendarList li:last-child {
   border-bottom: none;
 }
+
+/* FOOTER */
+.footer {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: 0.95rem;
+  margin-top: auto;
+}
+
+.footer span {
+  opacity: 0.8;
+}
+
+.footer strong {
+  color: #00D1B2; /* A green tint like in the user's screenshot, or anything bright */
+  font-weight: 700;
+}
