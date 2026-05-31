@@ -431,7 +431,7 @@ Ensemble, poursuivons nos efforts pour un avenir sans polio.
             <div className={styles.partnerGrid}>
               {/* FIRST SET */}
               <div className={styles.partnerLogoImage}>
-                <Image src="/logo-rotary-polio.png" alt="Rotary Polio" width={200} height={80} style={{ objectFit: 'contain' }} />
+                <Image src="/logo-rotary-polio.png" alt="Rotary Polio" width={300} height={100} style={{ objectFit: 'contain' }} />
               </div>
               <div className={styles.partnerLogoImage}>
                 <Image src="/logo-ministere-sante.png" alt="Ministère de la Santé" width={140} height={80} style={{ objectFit: 'contain' }} />
@@ -445,7 +445,7 @@ Ensemble, poursuivons nos efforts pour un avenir sans polio.
 
               {/* DUPLICATE SET FOR SEAMLESS SCROLL */}
               <div className={styles.partnerLogoImage}>
-                <Image src="/logo-rotary-polio.png" alt="Rotary Polio" width={200} height={80} style={{ objectFit: 'contain' }} />
+                <Image src="/logo-rotary-polio.png" alt="Rotary Polio" width={300} height={100} style={{ objectFit: 'contain' }} />
               </div>
               <div className={styles.partnerLogoImage}>
                 <Image src="/logo-ministere-sante.png" alt="Ministère de la Santé" width={140} height={80} style={{ objectFit: 'contain' }} />
