@@ -381,7 +381,7 @@ Ensemble, poursuivons nos efforts pour un avenir sans polio.
       </section>
 
       {/* CARTE INTERACTIVE */}
-      <section className={`section ${styles.mapSection}`}>
+      <section id="ressources" className={`section ${styles.mapSection}`}>
         <div className={`container ${styles.mapContainer}`}>
           <div className={styles.mapContent}>
             <h2 className={styles.sectionTitle}>Découvrez l'impact dans nos départements prioritaires</h2>
