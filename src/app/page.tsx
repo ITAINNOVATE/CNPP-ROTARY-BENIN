@@ -2,6 +2,7 @@ import styles from "./page.module.css";
 import Image from "next/image";
 import { supabase } from "@/lib/supabaseClient";
 import AnimatedStats from "@/components/AnimatedStats";
+import InteractiveMap from "@/components/InteractiveMap";
 
 export default async function Home() {
   // Fetch real data from Supabase (with fallback for demo purposes)
@@ -396,9 +397,8 @@ Ensemble, poursuivons nos efforts pour un avenir sans polio.
             <button className={styles.btnPrimary}>Explorer la carte</button>
           </div>
           <div className={styles.mapVisual}>
-            {/* Placeholder for SVG Map */}
-            <div className={styles.mapPlaceholder}>
-              Carte Interactive du Bénin<br/>(SVG à intégrer)
+            <div className={styles.mapPlaceholder} style={{ background: "none", border: "none" }}>
+              <InteractiveMap />
             </div>
           </div>
         </div>
