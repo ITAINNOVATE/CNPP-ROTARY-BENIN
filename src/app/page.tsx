@@ -26,12 +26,12 @@ export default async function Home() {
       description: `La Commission Nationale Polio Plus du Rotary Bénin, avec l’engagement des Rotary clubs et clubs Rotaract du Bénin, lance l’initiative « Vacciner pour la vie », une caravane digitale de sensibilisation communautaire pour promouvoir la vaccination et renforcer la confiance des populations dans les services de santé.
 À travers des capsules vidéo, des témoignages communautaires, des messages d’experts et des contenus en langues locales, cette campagne vise à rapprocher l’information fiable des familles et des communautés.
 
-🎯 Objectif :
+Objectif :
 Informer, rassurer et mobiliser autour de l’importance de la vaccination pour la protection des enfants et des communautés.
 
-🤝 Avec l’appui des partenaires de l’Initiative mondiale pour l’éradication de la poliomyélite (IMEP), cette action s’inscrit dans une dynamique de sensibilisation moderne, inclusive et de proximité.
+Avec l’appui des partenaires de l’Initiative mondiale pour l’éradication de la poliomyélite (IMEP), cette action s’inscrit dans une dynamique de sensibilisation moderne, inclusive et de proximité.
 
-📲 Suivez la campagne et partagez les messages autour de vous.
+Suivez la campagne et partagez les messages autour de vous.
 
 #VaccinerPourLaVie #EndPolioNow #RotaryBenin`
     },
@@ -42,13 +42,13 @@ Informer, rassurer et mobiliser autour de l’importance de la vaccination pour 
       image_url: "/annonce-date-1.jpg",
       description: `Du 12 au 15 juin 2026, les équipes de vaccination passeront dans les ménages des départements de l’Alibori, l’Atacora, le Borgou, les Collines, la Donga et le Plateau pour administrer gratuitement le vaccin contre la poliomyélite aux enfants de 0 à 59 mois.
 
-👶 Chaque enfant compte.
-💉 Le vaccin est sûr, efficace et gratuit.
-🛡️ La vaccination protège nos enfants contre la paralysie et contribue à préserver la santé de nos communautés.
+Chaque enfant compte.
+Le vaccin est sûr, efficace et gratuit.
+La vaccination protège nos enfants contre la paralysie et contribue à préserver la santé de nos communautés.
 
 Parents, leaders communautaires, responsables religieux, enseignants et élus locaux, mobilisons-nous pour que chaque enfant soit effectivement vacciné.
 
-🤝 Ensemble, poursuivons nos efforts pour un avenir sans polio.
+Ensemble, poursuivons nos efforts pour un avenir sans polio.
 
 #VaccinerPourLaVie #EndPolioNow #RotaryBenin #PolioPlus`
     }
@@ -87,11 +87,11 @@ Parents, leaders communautaires, responsables religieux, enseignants et élus lo
           </p>
           <div className={styles.heroButtons}>
             <button className={styles.btnPrimary}>
-              ▶ Regarder les capsules vidéo
+              Regarder les capsules vidéo
             </button>
-            <button className={styles.btnSecondary}>
-              📢 Découvrir la campagne
-            </button>
+            <a href="#campagnes" className={styles.btnSecondary}>
+              Découvrir la campagne
+            </a>
           </div>
         </div>
       </section>
