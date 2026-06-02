@@ -13,8 +13,7 @@ export default async function Home() {
   // Les capsules locales prioritaires
   const localVideos = [
     { id: 'local-1', title: "PP Olga KATHEMA ABALLO", description: "Vice Présidente Bénin de la Commission Polio Plus du district 9103.", duration: "", category: "Rotary", language: "Français", video_url: "/capsule-1.mp4" },
-    { id: 'local-2', title: "Mohamed BONI SENI", description: "Président du Comité de Liaison Inter Clubs du Bénin (CLIC).", duration: "", category: "Rotary", language: "Français", video_url: "/capsule-2.mp4" },
-    { id: 'local-3', title: "Capsule de sensibilisation", description: "Message de sensibilisation sur l'importance de la vaccination.", duration: "", category: "Rotary", language: "Français", video_url: "/capsule-3.mp4" }
+    { id: 'local-2', title: "Mohamed BONI SENI", description: "Président du Comité de Liaison Inter Clubs du Bénin (CLIC).", duration: "", category: "Rotary", language: "Français", video_url: "/capsule-2.mp4" }
   ];
 
   const displayVideos = fetchedVideos && fetchedVideos.length > 0 
