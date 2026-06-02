@@ -4,6 +4,7 @@ import { supabase } from "@/lib/supabaseClient";
 import AnimatedStats from "@/components/AnimatedStats";
 import InteractiveMap from "@/components/InteractiveMap";
 import VideoCard from "@/components/VideoCard";
+import VaccineCalculator from '../components/VaccineCalculator';
 
 export default async function Home() {
   // Fetch real data from Supabase (with fallback for demo purposes)
@@ -335,6 +336,8 @@ Ensemble, poursuivons nos efforts pour un avenir sans polio.
               </ul>
             </div>
           </div>
+          
+          <VaccineCalculator />
         </div>
       </section>
 
