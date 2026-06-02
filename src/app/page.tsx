@@ -111,7 +111,7 @@ Ensemble, poursuivons nos efforts pour un avenir sans polio.
         <div className={`container ${styles.presidentContainer}`}>
           <div className={styles.presidentImageWrapper}>
             <Image 
-              src="/pdg_dorothee_gounon.jpg" 
+              src="/DOROTHE GOUNON.png" 
               alt="PDG Dorothé GOUNON, Président de la Commission Nationale Polio Plus du Bénin"
               width={400}
               height={500}
