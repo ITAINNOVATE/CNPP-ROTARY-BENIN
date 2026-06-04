@@ -18,7 +18,8 @@ export default async function Home() {
     { id: 'local-3', title: "Kémal-Dine MAMA", description: "Président du club Rotaract de Cotonou Rive Droite", duration: "", category: "Rotary", language: "Français", video_url: "/capsule-3.mp4" },
     { id: 'local-4', title: "INOUSSA Moumouna", description: "Agent de santé, Aide PEV (Programme Élargi de Vaccination) CS KARIMAMA", duration: "", category: "Témoignages", language: "Dendi", video_url: "/capsule-4.mp4" },
     { id: 'local-5', title: "LAIMA Aliou", description: "Facilitateur à PIED ONG", duration: "", category: "Témoignages", language: "PEULH", video_url: "/capsule-5.mp4" },
-    { id: 'local-6', title: "OUANDO Ameline", description: "Volontaire communautaire et Mère de famille", duration: "", category: "Témoignages", language: "WAMA", video_url: "/capsule-6.mp4" }
+    { id: 'local-6', title: "OUANDO Ameline", description: "Volontaire communautaire et Mère de famille", duration: "", category: "Témoignages", language: "WAMA", video_url: "/capsule-6.mp4" },
+    { id: 'local-7', title: "IBRAHIM Djihadatou", description: "Volontaire ANPE", duration: "", category: "Témoignages", language: "KOTOKOLI", video_url: "/capsule-7.mp4" }
   ];
 
   const displayVideos = fetchedVideos && fetchedVideos.length > 0 
