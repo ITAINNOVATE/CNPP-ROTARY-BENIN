@@ -88,6 +88,8 @@ Ensemble, poursuivons nos efforts pour un avenir sans polio.
           />
           <nav className={styles.desktopNav}>
             <a href="#accueil" className={styles.navLink}>Accueil</a>
+            <a href="#capsules" className={styles.navLink}>NOS CAPSULES</a>
+            <a href="#rumeurs" className={styles.navLink}>RUMEUR/VERITE</a>
             <a href="#campagnes" className={styles.navLink}>Campagnes</a>
             <a href="#ressources" className={styles.navLink}>IMPACT/GALERIE</a>
             <a href="#contact" className={styles.navLink}>Contact</a>
@@ -195,7 +197,7 @@ Ensemble, poursuivons nos efforts pour un avenir sans polio.
       </section>
 
       {/* INFO OU RUMEUR */}
-      <section className={`section ${styles.rumorSection}`}>
+      <section id="rumeurs" className={`section ${styles.rumorSection}`}>
         <div className={`container`}>
           <div className={styles.sectionHeader}>
             <h2 className={styles.sectionTitleCenter}>Info ou Rumeur ?</h2>
