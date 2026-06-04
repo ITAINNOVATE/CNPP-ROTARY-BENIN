@@ -187,7 +187,7 @@ export default function VideoCard({ item }: { item: any }) {
           <div className="video-modal-content large-modal" onClick={e => e.stopPropagation()}>
             <div className="modal-video-section">
               {item.video_url ? (
-                <video src={item.video_url} controls autoPlay style={{ width: '100%', height: 'auto', maxHeight: '60vh', borderRadius: '16px 16px 0 0', backgroundColor: '#000' }} />
+                <video src={item.video_url} controls autoPlay style={{ width: '100%', height: 'auto', maxHeight: '50vh', borderRadius: '16px 16px 0 0', backgroundColor: '#000' }} />
               ) : (
                 <div style={{ padding: '2rem', textAlign: 'center' }}>Vidéo en cours de chargement...</div>
               )}

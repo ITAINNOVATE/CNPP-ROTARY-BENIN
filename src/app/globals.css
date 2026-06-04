@@ -127,15 +127,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .video-modal-close {
-  position: fixed;
-  top: 20px;
-  left: 20px;
+  position: absolute;
+  top: 15px;
+  left: 15px;
   background: var(--color-primary);
   color: #fff;
   border: none;
-  font-size: 1rem;
+  font-size: 14px;
   font-weight: 600;
-  padding: 10px 20px;
+  padding: 8px 16px;
   border-radius: 30px;
   cursor: pointer;
   z-index: 100000;
@@ -144,11 +144,17 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  width: max-content;
+  max-width: 200px;
+  max-height: 40px;
+  line-height: 1;
 }
-.video-modal-close:hover {
-  background: var(--color-secondary);
-  color: #000;
-  transform: translateY(-2px);
+@media (hover: hover) {
+  .video-modal-close:hover {
+    background: var(--color-secondary);
+    color: #000;
+    transform: translateY(-2px);
+  }
 }
 
 .modal-video-section {
