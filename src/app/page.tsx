@@ -90,7 +90,7 @@ Ensemble, poursuivons nos efforts pour un avenir sans polio.
             <a href="#accueil" className={styles.navLink}>Accueil</a>
             <a href="#capsules" className={styles.navLink}>NOS CAPSULES</a>
             <a href="#rumeurs" className={styles.navLink}>RUMEUR/VERITE</a>
-            <a href="#ressources" className={styles.navLink}>IMPACT/GALERIE</a>
+            <a href="#ressources" className={styles.navLink}>GALERIE</a>
             <a href="#contact" className={styles.navLink}>Contact</a>
           </nav>
           <div className="social-nav" style={{ display: 'flex', gap: '10px', alignItems: 'center', marginLeft: '20px' }}>
