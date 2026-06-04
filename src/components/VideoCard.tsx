@@ -13,10 +13,28 @@ export default function VideoCard({ item }: { item: any }) {
   const [hasLiked, setHasLiked] = useState(false);
   const [hasRated, setHasRated] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const videoRef = React.useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     fetchStats();
     fetchComments();
+    
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: '300px' }
+    );
+    
+    if (videoRef.current) {
+      observer.observe(videoRef.current);
+    }
+    
+    return () => observer.disconnect();
   }, [item.id]);
 
   const fetchStats = async () => {
@@ -120,16 +138,20 @@ export default function VideoCard({ item }: { item: any }) {
   return (
     <>
       <div className={styles.videoCard}>
-        <div className={styles.videoThumbnailWrapper} onClick={() => setIsModalOpen(true)} style={{ cursor: 'pointer', position: 'relative' }}>
-          {item.video_url ? (
-            <video 
-              src={`${item.video_url}#t=${item.thumbnailTime || 25.0}`} 
-              preload="metadata"
-              poster={item.thumbnail_url ? item.thumbnail_url : undefined}
-              style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '12px' }} 
-            />
+        <div className={styles.videoThumbnailWrapper} ref={videoRef} onClick={() => setIsModalOpen(true)} style={{ cursor: 'pointer', position: 'relative' }}>
+          {isVisible ? (
+            item.video_url ? (
+              <video 
+                src={`${item.video_url}#t=${item.thumbnailTime || 25.0}`} 
+                preload="metadata"
+                poster={item.thumbnail_url ? item.thumbnail_url : undefined}
+                style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '12px' }} 
+              />
+            ) : (
+              <Image src={item.thumbnail_url || "/video-thumb.jpg"} alt="Video thumbnail" layout="fill" objectFit="cover" />
+            )
           ) : (
-            <Image src={item.thumbnail_url || "/video-thumb.jpg"} alt="Video thumbnail" layout="fill" objectFit="cover" />
+            <div style={{ width: '100%', height: '100%', backgroundColor: '#eee', borderRadius: '12px' }}></div>
           )}
           
           {/* OVERLAY STATS ON CARD */}
