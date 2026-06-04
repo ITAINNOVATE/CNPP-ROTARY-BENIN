@@ -180,10 +180,11 @@ export default function VideoCard({ item }: { item: any }) {
 
       {isModalOpen && (
         <div className="video-modal-overlay" onClick={() => setIsModalOpen(false)}>
+          <button className="video-modal-close" onClick={(e) => { e.stopPropagation(); setIsModalOpen(false); }}>
+            <span style={{ marginRight: '8px', fontSize: '1.2rem' }}>&larr;</span> Retour au site
+          </button>
+          
           <div className="video-modal-content large-modal" onClick={e => e.stopPropagation()}>
-            <button className="video-modal-close" onClick={() => setIsModalOpen(false)}>
-              <span style={{ marginRight: '8px', fontSize: '1.2rem' }}>&larr;</span> Retour au site
-            </button>
             <div className="modal-video-section">
               {item.video_url ? (
                 <video src={item.video_url} controls autoPlay style={{ width: '100%', height: 'auto', maxHeight: '60vh', borderRadius: '16px 16px 0 0', backgroundColor: '#000' }} />
