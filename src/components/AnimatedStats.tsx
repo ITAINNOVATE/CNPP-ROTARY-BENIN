@@ -8,22 +8,26 @@ const useCountUp = (end: number, duration: number = 2000) => {
   const elementRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
+    let observer: IntersectionObserver;
+    let timer: NodeJS.Timeout;
+    
+    observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
-          let startTime: number;
-          const step = (timestamp: number) => {
-            if (!startTime) startTime = timestamp;
-            const progress = Math.min((timestamp - startTime) / duration, 1);
-            const currentCount = Math.floor(progress * end);
-            setCount(currentCount);
-            if (progress < 1) {
-              window.requestAnimationFrame(step);
-            } else {
+          const steps = 20;
+          const stepTime = duration / steps;
+          let currentStep = 0;
+          
+          timer = setInterval(() => {
+            currentStep++;
+            if (currentStep >= steps) {
               setCount(end);
+              clearInterval(timer);
+            } else {
+              setCount(Math.floor((currentStep / steps) * end));
             }
-          };
-          window.requestAnimationFrame(step);
+          }, stepTime);
+          
           observer.disconnect();
         }
       },
@@ -34,7 +38,10 @@ const useCountUp = (end: number, duration: number = 2000) => {
       observer.observe(elementRef.current);
     }
 
-    return () => observer.disconnect();
+    return () => {
+      if (observer) observer.disconnect();
+      if (timer) clearInterval(timer);
+    };
   }, [end, duration]);
 
   return { count, elementRef };
