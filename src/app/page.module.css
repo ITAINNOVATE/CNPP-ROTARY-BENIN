@@ -884,7 +884,7 @@
 .navLink {
   color: var(--color-black);
   font-weight: 600;
-  font-size: 1.05rem;
+  font-size: 0.85rem;
   text-decoration: none;
   padding: 0.5rem 1.2rem;
   border: 2px solid #F7A81B;
@@ -1073,7 +1073,7 @@
     font-size: 1.8rem;
   }
   .navLink {
-    font-size: 0.9rem;
+    font-size: 0.75rem;
     padding: 0.4rem 0.8rem;
   }
   .btnPrimary, .btnWatch {
