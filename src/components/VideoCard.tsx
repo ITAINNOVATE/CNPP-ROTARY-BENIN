@@ -20,21 +20,27 @@ export default function VideoCard({ item }: { item: any }) {
     fetchStats();
     fetchComments();
     
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect();
-        }
-      },
-      { rootMargin: '300px' }
-    );
+    let observer: IntersectionObserver;
+    const timer = setTimeout(() => {
+      observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+            observer.disconnect();
+          }
+        },
+        { rootMargin: '100px' }
+      );
+      
+      if (videoRef.current) {
+        observer.observe(videoRef.current);
+      }
+    }, 800); // Delay video loading by 800ms to keep page load fluid
     
-    if (videoRef.current) {
-      observer.observe(videoRef.current);
-    }
-    
-    return () => observer.disconnect();
+    return () => {
+      clearTimeout(timer);
+      if (observer) observer.disconnect();
+    };
   }, [item.id]);
 
   const fetchStats = async () => {
