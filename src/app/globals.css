@@ -127,21 +127,26 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .video-modal-close {
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  background: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  background: rgba(255, 255, 255, 0.2);
   color: #fff;
-  border: none;
-  font-size: 1.5rem;
-  width: 40px; height: 40px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  font-size: 2rem;
+  width: 50px; height: 50px;
   border-radius: 50%;
   cursor: pointer;
-  z-index: 10;
-  transition: background 0.3s;
+  z-index: 10000;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .video-modal-close:hover {
-  background: red;
+  background: #ff4757;
+  border-color: #ff4757;
+  transform: scale(1.1);
 }
 
 .modal-video-section {
