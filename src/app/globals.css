@@ -129,24 +129,26 @@ h1, h2, h3, h4, h5, h6 {
 .video-modal-close {
   position: fixed;
   top: 20px;
-  right: 30px;
-  background: rgba(255, 255, 255, 0.2);
+  left: 20px;
+  background: var(--color-primary);
   color: #fff;
-  border: 2px solid rgba(255, 255, 255, 0.5);
-  font-size: 2rem;
-  width: 50px; height: 50px;
-  border-radius: 50%;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 30px;
   cursor: pointer;
-  z-index: 10000;
+  z-index: 100000;
   transition: all 0.3s;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
 }
 .video-modal-close:hover {
-  background: #ff4757;
-  border-color: #ff4757;
-  transform: scale(1.1);
+  background: var(--color-secondary);
+  color: #000;
+  transform: translateY(-2px);
 }
 
 .modal-video-section {
