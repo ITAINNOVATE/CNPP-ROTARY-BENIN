@@ -13,6 +13,7 @@ export default async function Home() {
 
   // Les capsules locales prioritaires
   const localVideos = [
+    { id: 'local-0', title: "DGE Stanislas HACHEME", description: "Gouverneur Elu 2026-2027 du Rotary District 9103.", duration: "", category: "Rotary", language: "Français", video_url: "/capsule-0.mp4", thumbnailTime: 30 },
     { id: 'local-1', title: "PP Olga KATHEMA ABALLO", description: "Vice Présidente Bénin de la Commission Polio Plus du district 9103.", duration: "", category: "Rotary", language: "Français", video_url: "/capsule-1.mp4", thumbnailTime: 45 },
     { id: 'local-2', title: "Mohamed BONI SENI", description: "Président du Comité de Liaison Inter Clubs du Bénin (CLIC).", duration: "", category: "Rotary", language: "Français", video_url: "/capsule-2.mp4", thumbnailTime: 30 },
     { id: 'local-3', title: "Kémal-Dine MAMA", description: "Président du club Rotaract de Cotonou Rive Droite", duration: "", category: "Rotary", language: "Français", video_url: "/capsule-3.mp4" },
