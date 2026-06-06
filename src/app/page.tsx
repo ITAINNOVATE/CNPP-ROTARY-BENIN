@@ -23,7 +23,9 @@ export default async function Home() {
     { id: 'local-7', title: "IBRAHIM Djihadatou", description: "Volontaire ANPE", duration: "", category: "Témoignages", language: "KOTOKOLI", video_url: "/capsule8.mp4" },
     { id: 'local-8', title: "Maimounatou AROUNA", description: "Jeune femme Leader / Commune de DJOUGOU", duration: "", category: "Témoignages", language: "Dendi", video_url: "/capsule9.mp4" },
     { id: 'local-9', title: "KOTO Zibo", description: "Relais communautaire / Commune de Karimama", duration: "", category: "Témoignages", language: "DENDI", video_url: "/capsule10.mp4" },
-    { id: 'local-10', title: "Djamaloul-Dine ALIDOU", description: "Membre du Rotary Club de Natitingou Tanguiéta", duration: "", category: "Rotary", language: "Français", video_url: "/capsule11.mp4" }
+    { id: 'local-10', title: "Djamaloul-Dine ALIDOU", description: "Membre du Rotary Club de Natitingou Tanguiéta", duration: "", category: "Rotary", language: "Français", video_url: "/capsule11.mp4" },
+    { id: 'local-11', title: "TINDANOU SOULE BIO KARIMOU", description: "Agent de Santé Communautaire Qualifié Goumori (Banikoara)", duration: "", category: "Témoignages", language: "Non précisé", video_url: "/capsule12.mp4" },
+    { id: 'local-12', title: "Abiba BIO YO", description: "Agent de Santé Communautaire Qualifié (ASCQ) Localité : OUNET (BANIKOARA)", duration: "", category: "Témoignages", language: "Bariba", video_url: "/capsule13.mp4" }
   ];
 
   const displayVideos = fetchedVideos && fetchedVideos.length > 0 
