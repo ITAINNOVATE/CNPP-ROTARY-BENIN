@@ -148,7 +148,7 @@ export default function VideoCard({ item }: { item: any }) {
           {isVisible ? (
             item.video_url ? (
               <video 
-                src={`${item.video_url}#t=${item.thumbnailTime || 25.0}`} 
+                src={`${item.video_url}#t=${item.thumbnailTime || 5.0}`} 
                 preload="metadata"
                 poster={item.thumbnail_url ? item.thumbnail_url : undefined}
                 style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '12px' }} 
